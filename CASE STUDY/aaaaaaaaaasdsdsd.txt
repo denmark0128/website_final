@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="guitar.css">
+        <script type="text/Javascript">
+            function cangeimage() {
+                document.querySelector('.hero').style.backgroundImage = "url('/images/picguit.jpg')";
+            }
+    
+            function resetimage() {
+               document.querySelector('.hero').style.backgroundImage = "url('images/guitarbg.jpg')";
+            }
+            function changeimageh2() {
+                document.querySelector('.h2').style.backgroundImage = "url('/images/picguit.jpg')";
+                
+            }
+            function resetimageh2() {
+               document.querySelector('.h2').style.backgroundImage = "none";
+            }
+        </script>
+    </head>
+    <body>
+        <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <ul class="nav-menu">
+                    <li><a href="a" class="MenuButtons" input type="button">Shipping</a></li>
+                    <li><a href="bleh" class="MenuButtons" input type="button">Items</a></li>
+                    <li><a href="bleeeh" class="MenuButtons" input type="button">Dikoalam</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" onmouseover="cangeimage()" onmouseout="resetimage()">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">HeartStrings</h1>
+            </div>
+        </div>
+    </section>
+
+    </body>
+</html>

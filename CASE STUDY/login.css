@@ -1,0 +1,95 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo img{
+    height: 35px;
+    color: red;
+}
+
+.hero {
+    flex: 3;
+    background: url('images/bg_login.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+#login {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2F2F2;
+}
+
+#login .container {
+    width: 80%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+#login h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#login .user {
+    display: flex;
+    flex-direction: column;
+}
+
+#login .user input[type="text"],
+#login .user input[type="password"] {
+    padding: 12px;
+    margin: 12px 0;
+    border: 1px solid #AAA;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+#login .user input[type="button"] {
+    padding: 10px;
+    border: none;
+    border-radius: 100px;
+    background-color: #000000;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 10px 0;
+}
+
+#login .user input[type="button"]:hover {
+    transition: 0.3s;
+    background-color: #656565;
+}
+
+#login .user a {
+    color: red;
+    text-decoration: none;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+#login .user a:hover {
+    text-decoration: underline;
+}
+
+#login .user input[type="checkbox"] {
+    margin: 10px 0;
+}

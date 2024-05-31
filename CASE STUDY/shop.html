@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="shop.css">
+    <script src="shop.js"></script>
+    <script src="https://kit.fontawesome.com/70db5db2d7.js" crossorigin="anonymous"></script>
+</head>
+<body>
+ 
+    <style>
+        .container {
+            background-image: url(images/guitar_bg.jpg);
+        }
+    </style>
+    <div class="navbar" id="navbar">  
+        <div class="logo">
+            <a href="shop.html"><img src="images/LOGO_LIGHT.svg" alt=""></a>
+        </div>
+        <div class="menu">
+            <a href="javascript:void(0)" class="openbtn" onclick="openNav()">
+                <div class="icon-container">
+                    <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.29977 5H21L19 12H7.37671M20 16H8L6 3H3M9 20C9 20.5523 8.55228 21 8 21C7.44772 21 7 20.5523 7 20C7 19.4477 7.44772 19 8 19C8.55228 19 9 19.4477 9 20ZM20 20C20 20.5523 19.5523 21 19 21C18.4477 21 18 20.5523 18 20C18 19.4477 18.4477 19 19 19C19.5523 19 20 19.4477 20 20Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                    <span class="badge" id="cartBadge">0</span>
+                </div>
+            </a>
+            
+            <a href="#face">
+                <svg width="24px" height="64px" viewBox="-5 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000">
+                    <path d="M335.821282,7259 L335.821282,7250 L338.553693,7250 L339,7246 L335.821282,7246 L335.821282,7244.052 C335.821282,7243.022 335.847593,7242 337.286884,7242 L338.744689,7242 L338.744689,7239.14 C338.744689,7239.097 337.492497,7239 336.225687,7239 C333.580004,7239 331.923407,7240.657 331.923407,7243.7 L331.923407,7246 L329,7246 L329,7250 L331.923407,7250 L331.923407,7259 L335.821282,7259 Z" fill="#ffffff"></path>
+                </svg>
+            </a>
+            <a href="index.html">
+                <svg fill="#ffffff" width="24px" height="32px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
+                    <path d="M20,21V3H13a1,1,0,0,1,0-2h8a1,1,0,0,1,1,1V22a1,1,0,0,1-1,1H13a1,1,0,0,1,0-2ZM2,12a1,1,0,0,0,1,1H14.586l-2.293,2.293a1,1,0,1,0,1.414,1.414l4-4a1,1,0,0,0,0-1.414l-4-4a1,1,0,1,0-1.414,1.414L14.586,11H3A1,1,0,0,0,2,12Z"></path>
+                </svg>
+            </a>
+        </div>
+    </div>
+    <hr>
+
+    <div class="category">
+        <div class="catnav">
+            <a href="electric.html">ELECTRIC GUITARS</a>
+            <p>|</p>
+            <a href="acoustic.html">ACOUSTICS</a>
+            <p>|</p>
+            <a href="bass.html">BASSES</a>
+            <p>|</p>
+            <a href="amps.html">ACCESSORIES</a>
+        </div>
+    </div>
+
+    <div class="hero-image">
+        <img id="hero-img" src="images/guitar_bg.jpg" alt="Hero Image">
+    </div>
+
+    <div class="shop">
+        <div class="container2">
+            <h1>FEATURED PRODUCTS</h1>
+            <div class="featured items">
+                <div class="con1 image">
+                    <div class="item1 box"></div>
+                    <br>
+                    STRATOCASTER
+                </div> 
+                <div class="con2 image">
+                    <div class="item2 box"></div>
+                    <br>
+                    TELECASTER
+                </div> 
+                <div class="con3 image">      
+                    <div class="item3 box"></div>
+                    <br>
+                    JAGUAR
+                </div>    
+                <div class="con4 image">      
+                    <div class="item4 box"></div>
+                    <br>
+                    JAZZMASTER
+                </div>                 
+            </div>
+        </div>
+    </div>
+
+    <div class="store">
+        <h1>BEST SELLERS</h1>
+        <div class="store-main">
+        <button class="nav-button left-button" onclick="ScrollLeft1()"><i class="fa-solid fa-arrow-left"></i></button>
+        <div class="container4" id="container4a">
+            <div class="product2" onclick="showProductDetails('Player Stratocaster', 111999, 'images/best_1-removebg.png')">
+                <div class="imgBox">
+                <img src="images/best_1-removebg.png" alt="Player Stratocaster">
+            </div>
+        
+                <p>Player Stratocaster</p>
+                <p class="Price">PHP 111,999.00</p>
+            
+            </div>
+            <div class="product2" onclick="showProductDetails('American Professional Stratocaster', 139999, 'images/best_2-removebg.png')">
+                 <div class="imgBox">
+                <img src="images/best_2-removebg.png" alt="American Professional Stratocaster">
+                 </div>
+                <p>American Professional Stratocaster</p>
+                <p class="Price">PHP 139,999.99</p>
+            </div>
+            <div class="product2" onclick="showProductDetails('Player Plus Nashville Telecaster', 149999, 'images/best_3-removebg.png')">
+                <div class="imgBox">
+                <img src="images/best_3-removebg.png" alt="Player Plus Nashville Telecaster">
+                 </div>
+                <p>Player Plus Nashville Telecaster</p>
+                <p class="Price">PHP 149,999.99</p>
+            </div>
+            <div class="product2" onclick="showProductDetails('Mustang', 129999, 'images/best_4_removebg.png')">
+                <div class="imgBox">
+                <img src="images/best_4_removebg.png" alt="Mustang">
+                </div>
+                <p>Mustang</p>
+                <p class="Price">PHP 129,999.00</p>
+            </div>
+            <div class="product2" onclick="showProductDetails('Stratocaster', 99999, 'images/best_6-removebg.png')">
+                <div class="imgBox">
+                <img src="images/best_6-removebg.png" alt="Stratocaster">
+                </div>
+                <p>Stratocaster</p>
+                <p class="Price">PHP 99,999.00</p>
+            </div>
+            </div>
+            <button class="nav-button right-button" onclick="ScrollRight1()"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+    </div>
+
+    <div id="itemDetails" style="display: none;">
+        <div class="buttonDiv">
+        <button class="closeBtn" onclick="closeItemDetails()">&times;</button>
+        </div>
+        <div class="itemContainer">
+        <div class="imgContainer">
+        <img id="productImage" src="" alt="Product Image">
+        </div>
+        <h2 id="productName">Product Name</h2>
+        <p>Price: PHP <span id="productPrice">0.00</span></p>
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" min="1" value="1">
+        <button onclick="addToCart()">Add to Cart</button>
+        </div>
+    </div>
+    
+
+    <div id="mySidebar" class="sidebar">
+        <div class="cartnav">
+            <h2>Your Cart</h2>
+            <button onclick="closeNav()">
+                <svg width="64px" height="64px" viewBox="-0.5 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 21.32L21 3.32001" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M3 3.32001L21 21.32" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="cartDiv">   
+            <div class="cartItems" id="cartItems"></div>
+            <div class="contTotal">
+            <p>CART SUBTOTAL</p>
+            <div id="total" class="total"></div>
+            </div>
+            <div class="viewCart"><a href="cart.html">View Cart</a></div>
+            <button onclick="checkout()">Checkout</button>
+        </div>
+    </div>
+
+    <div class="store">   
+        <h1>MUST-HAVE ACCESSORIES</h1>
+        <div class="store-main">
+            <button class="nav-button left-button" onclick="ScrollLeft2()"><i class="fa-solid fa-arrow-left"></i></button>
+        <div class="container4" id="container4b">
+            
+            <div class="product2" onclick="showProductDetails('Classic Series Wood Cases - Stratocaster®/Telecaster®', 9999, 'images/must_have_1.png')">
+                <div class="imgBox2">
+                <img src="images/must_have_1.png" alt="Classic Series Wood Cases - Stratocaster®/Telecaster®">
+            </div>       
+                <p>Player Stratocaster</p>
+                <p class="Price">PHP 9,999.00</p>
+            </div>
+            <div class="product2" onclick="showProductDetails('Original Tuners', 1299, 'images/must_have_2.png')">
+                 <div class="imgBox2">
+                <img src="images/must_have_2.png" alt="Original Tuners">
+                 </div>
+                <p>Original Tuners</p>
+                <p class="Price">PHP 1,299.00</p>
+            </div>
+            <div class="product2" onclick="showProductDetails('Adjustable Guitar Stand', 1299, 'images/must_have_3.png')">
+                <div class="imgBox2">
+                <img src="images/must_have_3.png" alt="Adjustable Guitar Stand">
+                 </div>
+                <p>Adjustable Guitar Stand</p>
+                <p class="Price">PHP 1,299.00</p>
+            </div>
+            <div class="product2" onclick="showProductDetails('Laurel Acoustic Capo', 999, 'images/must_have_4.png')">
+                <div class="imgBox2">
+                <img src="images/must_have_4.png" alt="Laurel Acoustic Capo">
+                </div>
+                <p>Laurel Acoustic Capo</p>
+                <p class="Price">PHP 999.99</p>
+            </div>
+            <div class="product2" onclick="showProductDetails('Celluloid Medley Picks, 351 Shape - 12 Pack', 399, 'images/must_have_5.png')">
+                <div class="imgBox2">
+                <img src="images/must_have_5.png" alt="Celluloid Medley Picks, 351 Shape - 12 Pack">
+                </div>
+                <p>Celluloid Medley Picks, 351 Shape - 12 Pack</p>
+                <p class="Price">PHP 399.00</p>
+                </div>
+            </div>
+            <button class="nav-button right-button" onclick="ScrollRight2()"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+    </div>
+    <div class="about">
+        <div class="about-us">
+            <h2>About Us</h2>
+            <p>We are a team of passionate individuals who are dedicated to providing the best products and services to our customers. Our mission is to make a positive impact on the world through our work, and we strive to exceed our customers' expectations in everything we do.</p>
+            <p>We believe that our success is built on the trust and loyalty of our customers, and we are committed to building long-term relationships with them. We are always looking for ways to improve and innovate, and we welcome feedback from our customers to help us achieve our goals.</p>
+          </div>
+    </div>
+
+
+    <footer>
+        <div class="footerContainer" style="margin-top: 30px;">
+           <div class="footer-logo">         
+                <a href="shop.html"><img src="images/LOGO_LIGHT.svg" alt=""></a>
+        </div>
+        <div class="left-footer">
+            <h1>Don't miss out!</h1>
+        <div class="left-up-footer">
+          
+            <div class="footer-form">
+            <div class="footer-label">
+            <p>Be the first to know about new products, featured content, exclusive offers and giveaways.</p> 
+            </div>
+            <div class="footer-input">
+            <input type="email" size="70" class="email" placeholder="ENTER YOUR EMAIL ADDRESS">
+            <input type="button" class="email-send" value="SIGN UP">
+            </div>
+        </div>
+        </div>
+        <div class="left-down-footer">
+            <div class="footer-products">
+                <li>
+                    <ul>Products</ul>
+                    <ul><a href="">Electric Guitars</a></ul>
+                    <ul><a href="">Acoustic Guitars</a></ul>
+                    <ul><a href="">Basses</a></ul>
+                    <ul><a href="">Guitar Amplifiers</a></ul>
+                </li>
+            </div>
+            <div class="footer-company">
+                <li>
+                    <ul>Products</ul>
+                    <ul><a href="">About us</a></ul>
+                    <ul><a href="">Contact us</a></ul>
+                </li>
+            </div>
+            <div class="footer-support">
+                <li>
+                    <ul>Customer Service</ul>
+                    <ul><a href="">Support</a></ul>
+                    <ul><a href="">Store policies</a></ul>
+                    <ul><a href="">Warranty</a></ul>
+                    <ul><a href="">Manual</a></ul>
+                </li>
+            </div>
+            <div class="footer-account">
+                <li>
+                    <ul>Account</ul>
+                    <ul><a href="">My Account</a></ul>
+                    <ul><a href="">Cart</a></ul>
+                </li>
+            </div>
+        </div>
+        <div>
+            <hr>
+        </div>
+        <div class="footer-copyright">
+            <div class="copyright-text">
+            <p>Copyright © 2024 All Rights Reserved by Denmark Bensing.</p>
+            </div>
+            <div class="socials">
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            
+            
+        </div>
+        </div>
+        
+        </div>
+      
+    </footer>
+</body>
+</html>

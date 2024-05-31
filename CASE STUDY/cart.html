@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="cart.css">
+    <script src="shop.js" defer></script>
+</head>
+<body onload="onPageLoad()">
+  
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        .container {
+            background-image: url(images/guitar_bg.jpg);
+        }
+    </style>
+    <div class="navbar">  
+        <div class="logo">
+            <a href="shop.html">LOGO</a>
+        </div>
+        <div class="menu">
+            <a href="javascript:void(0)" class="openbtn" onclick="openNav()">
+                <div class="icon-container">
+                    <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.29977 5H21L19 12H7.37671M20 16H8L6 3H3M9 20C9 20.5523 8.55228 21 8 21C7.44772 21 7 20.5523 7 20C7 19.4477 7.44772 19 8 19C8.55228 19 9 19.4477 9 20ZM20 20C20 20.5523 19.5523 21 19 21C18.4477 21 18 20.5523 18 20C18 19.4477 18.4477 19 19 19C19.5523 19 20 19.4477 20 20Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                    <span class="badge" id="cartBadge">0</span>
+                </div>
+            </a>
+            <a href="#face">
+                <svg width="24px" height="64px" viewBox="-5 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000">
+                    <path d="M335.821282,7259 L335.821282,7250 L338.553693,7250 L339,7246 L335.821282,7246 L335.821282,7244.052 C335.821282,7243.022 335.847593,7242 337.286884,7242 L338.744689,7242 L338.744689,7239.14 C338.744689,7239.097 337.492497,7239 336.225687,7239 C333.580004,7239 331.923407,7240.657 331.923407,7243.7 L331.923407,7246 L329,7246 L329,7250 L331.923407,7250 L331.923407,7259 L335.821282,7259 Z" fill="#ffffff"></path>
+                </svg>
+            </a>
+            <a href="login.html">
+                <svg fill="#ffffff" width="24px" height="32px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
+                    <path d="M20,21V3H13a1,1,0,0,1,0-2h8a1,1,0,0,1,1,1V22a1,1,0,0,1-1,1H13a1,1,0,0,1,0-2ZM2,12a1,1,0,0,0,1,1H14.586l-2.293,2.293a1,1,0,1,0,1.414,1.414l4-4a1,1,0,0,0,0-1.414l-4-4a1,1,0,1,0-1.414,1.414L14.586,11H3A1,1,0,0,0,2,12Z"></path>
+                </svg>
+            </a>
+        </div>
+    </div>
+    <hr>
+
+    <div class="category">
+        <div class="catnav">
+            <a href="electric.html">ELECTRIC GUITARS</a>
+            <p>|</p>
+            <a href="acoustic.html">ACOUSTICS</a>
+            <p>|</p>
+            <a href="bass.html">BASSES</a>
+            <p>|</p>
+            <a href="amps.html">ACCESSORIES</a>
+        </div>
+    </div>
+
+
+    <div id="cart" class="cart">
+     
+        <div class="column">
+            
+        <div class="cartCont">   
+            <div class="cartnav">
+                <h2>Your Cart</h2>
+            </div>
+            <hr>
+            <div class="cartItems" id="cartItems"></div>
+            <div class="contTotal">
+            
+            </div>
+        </div>
+        <div class="checkout">
+            <h1>ORDER SUMMARY</h1>
+            <div class="subtotal">
+                <div class="total-div">
+                <p>Total:</p>
+                <div id="total" class="total"></div>
+                 </div>
+                <div class="shipping">
+                    <p>Shipping: </p>
+                    <p style="color: #d52b1e; font-weight: bold;">Free</p>
+                </div>
+                <div class="tax">
+                    <p>Tax:</p>
+                    <p>PHP 0.00</p>
+                </div>
+                <hr>
+                <div class="estimated-total">
+                    <p>Estimated Total:</p>
+                    <div id="total" class="total"></div>
+                </div>
+                <div class="checkout-button">
+                    <button class="button" id="open-checkout-button">CHECKOUT</button>
+                </div>
+            </div>
+
+        </div>
+         </div>
+    </div>
+
+
+    <div id="checkout-popup" class="checkout-popup">
+        <div class="checkout-popup-content">
+            <h2>Checkout</h2>
+            <form id="checkout-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" name="phone" required>
+    
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required>
+    
+                <label for="payment">Payment Method:</label>
+                <select id="payment" name="payment">
+                    <option value="credit_card">Credit Card</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="bank_transfer">Bank Transfer</option>
+                </select>
+    
+                <div class="buttons">
+                <button type="submit">SUBMIT</button>
+                <button id="close-checkout-button">CLOSE</button>
+                </div>
+            </form>
+            
+        </div>
+    </div>
+    
+    
+    <footer>
+        <div class="footerContainer" style="margin-top: 30px;">
+            <div class="footer-logo">         
+                <a href="shop.html"><img src="images/LOGO_LIGHT.svg" alt=""></a>
+        </div>
+        <div class="left-footer">
+            <h1>Don't miss out!</h1>
+        <div class="left-up-footer">
+          
+            <div class="footer-form">
+            <div class="footer-label">
+            <p>Be the first to know about new products, featured content, exclusive offers and giveaways.</p> 
+            </div>
+            <div class="footer-input">
+            <input type="email" size="70" class="email" placeholder="ENTER YOUR EMAIL ADDRESS">
+            <input type="button" class="email-send" value="SIGN UP">
+            </div>
+        </div>
+        </div>
+        <div class="left-down-footer">
+            <div class="footer-products">
+                <li>
+                    <ul>Products</ul>
+                    <ul><a href="">Electric Guitars</a></ul>
+                    <ul><a href="">Acoustic Guitars</a></ul>
+                    <ul><a href="">Basses</a></ul>
+                    <ul><a href="">Guitar Amplifiers</a></ul>
+                </li>
+            </div>
+            <div class="footer-company">
+                <li>
+                    <ul>Products</ul>
+                    <ul><a href="">About us</a></ul>
+                    <ul><a href="">Contact us</a></ul>
+                </li>
+            </div>
+            <div class="footer-support">
+                <li>
+                    <ul>Customer Service</ul>
+                    <ul><a href="">Support</a></ul>
+                    <ul><a href="">Store policies</a></ul>
+                    <ul><a href="">Warranty</a></ul>
+                    <ul><a href="">Manual</a></ul>
+                </li>
+            </div>
+            <div class="footer-account">
+                <li>
+                    <ul>Account</ul>
+                    <ul><a href="">My Account</a></ul>
+                    <ul><a href="">Cart</a></ul>
+                </li>
+            </div>
+        </div>
+        <div>
+            <hr>
+        </div>
+        <div class="footer-copyright">
+            <div class="copyright-text">
+            <p>Copyright © 2024 All Rights Reserved by Denmark Bensing.</p>
+            </div>
+            <div class="socials">
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            
+            
+        </div>
+        </div>
+        
+        </div>
+      
+    </footer>
+</body>
+</html>
